@@ -1,0 +1,17 @@
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\Pidev.servicePatterh.dll.config
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\Pidev.servicePatterh.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\Pidev.servicePatterh.pdb
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\EntityFramework.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\EntityFramework.xml
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\obj\Debug\Pidev.servicePattern.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\obj\Debug\Pidev.servicePattern.csproj.CopyComplete
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\obj\Debug\Pidev.servicePatterh.dll
+C:\Users\Dell\source\repos\Pidev\Pidev.servicePatterh\obj\Debug\Pidev.servicePatterh.pdb
