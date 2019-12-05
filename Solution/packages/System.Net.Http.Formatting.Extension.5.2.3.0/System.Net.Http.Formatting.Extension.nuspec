@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>System.Net.Http.Formatting.Extension</id>
+        <version>5.2.3.0</version>
+        <title>System.Net.Http.Formatting</title>
+        <authors>andre.agostinho</authors>
+        <owners>Microsoft</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Extesion Assembly System.Net.Http.Formatting</description>
+        <summary>Extesion Assembly System.Net.Http.Formatting.dll</summary>
+        <language>en-U</language>
+        <tags>System.Net.Http.Formatting web api 2</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.0">
+                <dependency id="System.Net.Http" />
+            </group>
+        </dependencies>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System.Net" targetFramework=".NETFramework4.5" />
+        </frameworkAssemblies>
+    </metadata>
+</package>

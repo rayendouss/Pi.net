@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Solution.Presentation.Models.LigneqstsModel>
+
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#ligneqst').dataTable(
+            {});
+    });
+</script>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<body>
+    <table class="table" id="ligneqst" >
+        <thead>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.noteQst)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.evaluation_id_Eval)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.question_id_Qst)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.noteQst)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.evaluation_id_Eval)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.question_id_Qst)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id_LigneQst }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id_LigneQst }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id_LigneQst })
+                    </td>
+                </tr>
+            }
+        <tbody>
+    </table>
+</body>  

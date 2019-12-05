@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Mvc.JQuery.DataTables.Common</id>
+    <version>1.5.50</version>
+    <authors>Harry McIntyre</authors>
+    <owners>Harry McIntyre</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/mcintyre321/mvc.jquery.datatables/blob/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/mcintyre321/mvc.jquery.datatables</projectUrl>
+    <description>Popular lib for using DataTables.net with IQueryable. This package contain x-platform shared code. Install either Mvc.JQuery.DataTables for MVC5 or Mvc.JQuery.DataTables.AspNetCore for AspNetCore</description>
+    <copyright>Harry McIntyre</copyright>
+    <tags>jquery datatables iqueryable razor asp mvc mvc5</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="Newtonsoft.Json" version="9.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Dynamic.Core" version="1.0.7.5" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.6">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.ComponentModel.Annotations" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.ComponentModel.Primitives" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Dynamic.Core" version="1.0.7.5" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.TypeExtensions" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.5.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

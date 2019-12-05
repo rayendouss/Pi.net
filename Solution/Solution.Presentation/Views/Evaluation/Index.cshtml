@@ -1,0 +1,182 @@
+﻿@model PagedList.IPagedList<Solution.Data.evaluation>
+
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<style>
+    table {
+        width: 100%;
+    }
+
+        table tr td {
+            border: 2px solid black;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        table tr:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        table tr th {
+            border: 2px solid black;
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+        }
+
+    .filter-table .quick {
+        margin-left: 0.5em;
+        font-size: 0.8em;
+        text-decoration: none;
+    }
+
+    fitler-table .quick:hover {
+        text-decoration: underline;
+    }
+
+    td.alt {
+        background-color: #ffc;
+        background-color: rgba(255, 255, 0, 0.2);
+    }
+</style>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#datatable').dataTable(
+            {});
+    });
+</script>
+
+
+
+@using (Html.BeginForm())
+{<body>
+        <table class="table" id="evaluation">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.ActionLink("TypeEval", "Index",
+                     new { sortOrder = "TypeEval", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("commentaire", "Index",
+                     new { sortOrder = "commentaire", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+
+                    <th>
+                        @Html.ActionLink("contexteEval", "Index",
+                     new { sortOrder = "contexteEval", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("dateEval", "Index",
+                     new { sortOrder = "dateEval", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("description", "Index",
+                     new { sortOrder = "description", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("idCandidat", "Index",
+                     new { sortOrder = "idCandidat", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("noteEmploye", "Index",
+                     new { sortOrder = "noteEmploye", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("noteManager", "Index",
+                     new { sortOrder = "noteManager", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("periodEval", "Index",
+                     new { sortOrder = "periodEval", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                    <th>
+                        @Html.ActionLink("employe_id_Emp", "Index",
+                     new { sortOrder = "employe_id_Emp", CurrentSort = ViewBag.CurrentSort })
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TypeEval)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.commentaire)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.contexteEval)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dateEval)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.idCandidat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.noteEmploye)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.noteManager)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.periodEval)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.employe_id_Emp)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id_Eval }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.id_Eval }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id_Eval })
+                            @Html.ActionLink("Convert To PDF", "PrintAllEmployee")|
+                            @Html.ActionLink("Convet to Image", "EmployeeImage", new { id = item.id_Eval })|
+                            @Html.ActionLink("Contact Client", "ConfirmOrder", new { id = item.id_Eval }, null)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+    <br />
+    <div id='Paging' style="text-align:center">
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+        of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    </div>
+
+    <dt>
+        Nombres Des Evaluations = @ViewBag.nbprojet
+    </dt>
+    <dt>
+        Nombre Des Evaluation qui On une note supperieure ou egale a 10=   @ViewBag.total
+
+    </dt>
+
+
+    <dt>
+        Pourcentage des employees qui ont réussi l'evaluation= @ViewBag.reus %
+
+    </dt>
+}
+<td></td>
